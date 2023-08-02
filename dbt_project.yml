@@ -38,6 +38,7 @@ models:
       schema : 'staging'
     example:
       materialized: view
-    datasets: 
-      transaction:
+  datasets: 
+    transaction:
+      location: EU 
 
