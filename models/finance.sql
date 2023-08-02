@@ -19,8 +19,8 @@ date_orders AS (
     SUM(turnover) as turnover,
     SUM(product_margin) AS product_margin,
     SUM(shipping_fee) AS shipping_fee,
-    SUM(ship_cost) AS ship_cost,
-    SUM(log_cost) AS log_cost,
+    SUM(cast(ship_cost as float64)) AS ship_cost,
+    SUM(logCost) AS log_cost,
     SUM(operational_margin) AS operational_margin
     FROM orders
     GROUP BY date_date
@@ -32,7 +32,7 @@ SELECT
     SUM(ads_cost) as ads_cost,
     SUM(impression) as impression,
     SUM(click) as click
-    FROM int_campaign
+    FROM campaign
     GROUP BY date_date
 ),
 

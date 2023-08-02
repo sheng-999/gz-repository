@@ -40,3 +40,10 @@ models:
         - name: campaign_cost 
           tests:
             - not_null
+    - name: orders
+      description:  orders info 
+      columns:
+        - name: orders_id 
+          tests:
+            - unique
+            - not_null
