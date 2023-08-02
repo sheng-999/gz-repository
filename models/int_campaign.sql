@@ -1,10 +1,11 @@
 {{ config(
     materialized='table',
     partition_by={
-      "field": "date_date"
+      "field": "date_date",
+      "data_type": "date",
+      "granularity": "day"
     }
 )}}
-
 
 
 SELECT
@@ -12,8 +13,7 @@ date_date,
 paid_source,					
 campaign_key,				
 campaign_name,				
-ads_cost,	
-sum(ads_cost) over(partition by date_date, campaign_key) as campaign_cost,			
+ads_cost,			
 impression,				
 click
 FROM 
@@ -24,4 +24,3 @@ UNION ALL
 SELECT * FROM {{ ref('stg_criteo') }}
 UNION ALL 
 SELECT * FROM {{ ref('stg_facebook') }})
-ORDER BY date_date
