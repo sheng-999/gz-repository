@@ -24,7 +24,7 @@ SELECT
 	,ROUND(s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),2) AS purchase_cost
     --- description: total purchase cost for each product id ------
 	-- margin --
-	,s.revenue - s.quantity*CAST(p.purchSE_PRICE AS FLOAT64) AS margin
+	,s.revenue - s.quantity*CAST(p.purchSE_PRICE AS FLOAT64) AS product_margin
     --- description: margin =total turnover - purchase costs 
 FROM sales s
 INNER JOIN product p ON s.pdt_id = p.products_id
