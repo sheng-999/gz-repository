@@ -39,6 +39,6 @@ models:
     example:
       materialized: view
   datasets: 
-    transaction:
+    gz_dev_1_transaction:
       location: EU 
 
