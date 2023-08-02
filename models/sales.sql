@@ -8,7 +8,7 @@ WITH
 
 SELECT
   s.date_date
-  ### Key ###
+  ### Key TEST ###
   ,s.orders_id
   ,s.pdt_id AS products_id
   ###########
