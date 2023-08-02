@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 ----------- reference --------------------
 
 WITH orders AS (
