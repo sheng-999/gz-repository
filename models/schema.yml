@@ -34,16 +34,3 @@ models:
 
           - name: margin
             description : the product margin. Subtraction of the turnover and the purchase_cost
-    - name: int_campaign
-      description: all campaign infos 
-      columns:
-        - name: campaign_cost 
-          tests:
-            - not_null
-    - name: orders
-      description:  orders info 
-      columns:
-        - name: orders_id 
-          tests:
-            - unique
-            - not_null
