@@ -34,3 +34,9 @@ models:
 
           - name: margin
             description : the product margin. Subtraction of the turnover and the purchase_cost
+    - name: orders
+      description: including ship infos 
+      columns:
+        - name: orders_id
+          tests:
+            - unique
