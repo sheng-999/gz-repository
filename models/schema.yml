@@ -10,7 +10,7 @@ models:
 
       columns:
           - name: orders_id 
-            description : the unique identifier of the orders
+            description : the unique identifier of the orders, test
             tests : 
             - not_null
 
